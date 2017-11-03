@@ -1,0 +1,16 @@
+{
+  "params": {
+    "apiCredentials": {
+      "username" : "",
+      "password" : ""
+    },
+    "report": {
+      "email": "no"
+    },
+    "branch": "develop"
+  },
+  "suites": {
+    "todo": "../specs/angularTodo.spec.js",
+    "api" : "../specs/apiTest.spec.js"
+  }
+}

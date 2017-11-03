@@ -1,0 +1,55 @@
+<div>
+    <div>
+        <div style="width:800px;margin:auto;border:1px solid #eee">
+            <header style="background-color: #373f49; height: 120px;">
+                <div style="width: 420px; height: 20px; color: white; margin: 40px 0 0 50px; float: right; margin-top: 30px;">
+                    <h3>PROTRACTOR E2E AUTOMATION REPORT</h3>
+                </div>
+                <div style="width: 150px; height: 150px; border-radius: 50%; background-color: white; border: 1px solid #eee; margin: 0px 0 0 50px; float: left;">
+                    <div style="width: 100px; height: 100px; border-radius: 50%; background-color: #00acc1; margin: 25px 0 0 25px;">
+
+                        <img style="width: 100px; height: 100px; float: right;" src="{{statusicon}}"/>
+                    </div>
+                </div>
+            </header>
+            <div style="background-color: white; height: 300px; padding: 100px 80px 40px;">
+                <h3>Execution stats:</h3>
+                <table border="0px" cellspacing="10px" cellpadding="0px">
+                    <tbody>
+                    {{tablebody}}
+                    </tbody>
+                </table>
+            </div>
+            <footer style="background-color : #e7e8e8;height: 80px; padding-top: 30px">
+                <!--table border="0" style="width: 97%;">
+                    <tr>
+                        <td style="width: 80%;">
+                            <a href="http://unifisoftware.com" style="margin-left: 40px">
+                                <img style="width: 140px;height: 40px;"
+                                     src="data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxODguNzcgNDcuOTQiPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDojMzczZTRhO30uY2xzLTJ7ZmlsbDojZjM3MDIxO30uY2xzLTN7ZmlsbDojMmZiY2IzO30uY2xzLTR7ZmlsbDojOTM5Mjk5O308L3N0eWxlPjwvZGVmcz48dGl0bGU+VW5pZmlfTG9nb19Db2xvcl9Ob19UYWc8L3RpdGxlPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTM2LjgzLDEwLDM0LjY0LDcuNzZhMTAuMjUsMTAuMjUsMCwwLDAtMTQuMzctLjE4TDEzLjcsMTMuOWExMCwxMCwwLDAsMC0uMTYsMTQuMkwyNy4zNywxNC43N2wxLjksMS45MkwzNi44MywxMCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTMuMzggLTQuNDQpIi8+PHBhdGggY2xhc3M9ImNscy0yIiBkPSJNNjYuMjgsMjEuOTNsLTYuMTUtNi43NkE5LjgzLDkuODMsMCwwLDAsNDYsMTQuNjZMNTksMjguOSw0NS4wOSw0Mi4xNmExMC4xOSwxMC4xOSwwLDAsMS02LjMxLDIuNDFsLTIuNzMsMi42NywxLjczLDEuODlhOS44Miw5LjgyLDAsMCwwLDE0LjExLjUxbDEzLjktMTMuMjZhMTAuNCwxMC40LDAsMCwwLC40OS0xNC40NSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTMuMzggLTQuNDQpIi8+PHBhdGggY2xhc3M9ImNscy0zIiBkPSJNNTMuMzMsNy42OWE5LjgyLDkuODIsMCwwLDAtMTQuMTEtLjUxTDI1LjMyLDIwLjQ1YTEwLjQsMTAuNCwwLDAsMC0uNDksMTQuNDVsNC43Nyw1LjI0LDctNy4yOC00LjQ5LTQuOTNoMEw0NiwxNC42NmE5LjgsOS44LDAsMCwxLDkuNzMtMi4yOSw5LjkxLDkuOTEsMCwwLDEsNC4zOCwyLjhMNTMuMzMsNy42OSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTMuMzggLTQuNDQpIi8+PHBhdGggY2xhc3M9ImNscy00IiBkPSJNNDAuODksMjguNDVoMEwyNy4wNiw0MS43OSwxMy41NCwyOC4xYTEwLDEwLDAsMCwxLC4xNi0xNC4ybC03LjI3LDdhMTAsMTAsMCwwLDAtLjE2LDE0LjJsNi40Miw2LjVoMEwxOS44LDQ4LjhBMTAuMjUsMTAuMjUsMCwwLDAsMzQuMTcsNDlsNi41Ni02LjMzYTEwLDEwLDAsMCwwLDIuMTEtMyw5Ljc5LDkuNzksMCwwLDAsLjU3LTEuNTIsMTAsMTAsMCwwLDAtMi41Mi05LjczIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMy4zOCAtNC40NCkiLz48cGF0aCBjbGFzcz0iY2xzLTMiIGQ9Ik0zOC43OCw0NC41N2ExMC4xOSwxMC4xOSwwLDAsMCw2LjMxLTIuNDFoMGwtMS44LTItNC41LDQuMzkiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0zLjM4IC00LjQ0KSIvPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTQ4LjE2LDIxLjQ0bC00LjQ4LTQuNTQtNy4yOSw3LDQuNTEsNC41N2gwYTEwLDEwLDAsMCwxLDIuNTIsOS43MywxMC4xNCwxMC4xNCwwLDAsMS0xLjQ2LDNsLS4wNS4wN2MtLjE0LjItLjMuMzktLjQ2LjU4bC0uMTMuMTVjLS4xOS4yMS0uMzguNDItLjU5LjYybDcuMjctN2ExMCwxMCwwLDAsMCwuMTYtMTQuMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTMuMzggLTQuNDQpIi8+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNMTAxLjA1LDQ0LjYyLDk5LjgzLDQxLjFoLS41N2E3Ljk0LDcuOTQsMCwwLDEtMy40LDMsMTEuODUsMTEuODUsMCwwLDEtNS4xMywxLDkuNTgsOS41OCwwLDAsMS03LjI2LTIuNzFxLTIuNi0yLjcxLTIuNTktNy42NVYxNi4zNmg5Ljc1VjMxLjhBOC44Niw4Ljg2LDAsMCwwLDkxLjQxLDM2LDIuNzIsMi43MiwwLDAsMCw5NCwzNy40MWEzLjc2LDMuNzYsMCwwLDAsMy41OS0ycTEuMDctMiwxLjA3LTYuN1YxNi4zNmg5Ljc1VjQ0LjYyWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTMuMzggLTQuNDQpIi8+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNMTMwLjk0LDQ0LjYyVjI5LjIxYTguODUsOC44NSwwLDAsMC0uODEtNC4yNSwyLjc3LDIuNzcsMCwwLDAtMi42MS0xLjQzLDMuNzcsMy43NywwLDAsMC0zLjU3LDJxLTEuMSwyLTEuMSw2Ljc2VjQ0LjYySDExMy4xVjE2LjM2aDcuMzZsMS4yMiwzLjQ5aC41N2E3LjczLDcuNzMsMCwwLDEsMy40NS0zLDEyLjIxLDEyLjIxLDAsMCwxLDUuMDgtMSw5LjYzLDkuNjMsMCwwLDEsNy4zLDIuNzJxMi42MSwyLjcyLDIuNjEsNy42NlY0NC42MloiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0zLjM4IC00LjQ0KSIvPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTE0NS4wOCw5LjMzYTQuMTIsNC4xMiwwLDAsMSwxLjIyLTMuMjcsNy43NCw3Ljc0LDAsMCwxLDcuOTEsMCw0LjA5LDQuMDksMCwwLDEsMS4yNSwzLjI0cTAsNC4yOS01LjIxLDQuMjlUMTQ1LjA4LDkuMzNabTEwLDM1LjI5aC05Ljc1VjE2LjM2aDkuNzVaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMy4zOCAtNC40NCkiLz48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0xNzguMTMsMjMuNjdoLTZ2MjFoLTkuNzV2LTIxaC0zLjc0VjE4Ljg4bDMuOTQtMi4zOVYxNnEwLTUuNTksMi4yOC04dDcuMzItMi40NGEyMS42MSwyMS42MSwwLDAsMSwzLjY4LjMsMjkuMzIsMjkuMzIsMCwwLDEsNCwxbC0yLjA5LDYuMzFhMTMuMTQsMTMuMTQsMCwwLDAtMy41Mi0uNSwxLjksMS45LDAsMCwwLTEuNjMuNjksMy43OSwzLjc5LDAsMCwwLS41MSwyLjIzdi43NWg2Wm0zLjY0LTE0LjM0QTQuMTIsNC4xMiwwLDAsMSwxODMsNi4wNmE3Ljc0LDcuNzQsMCwwLDEsNy45MSwwLDQuMDksNC4wOSwwLDAsMSwxLjI1LDMuMjRxMCw0LjI5LTUuMjEsNC4yOVQxODEuNzcsOS4zM1ptMTAsMzUuMjlIMTgyVjE2LjM2aDkuNzVaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMy4zOCAtNC40NCkiLz48L3N2Zz4=">
+                            </a>
+                        </td>
+                        <td style="width:7%">
+                            <a href="https://www.facebook.com/unifisoftware" target="_blank">
+                                <img style="width: 40px;height: 40px;"
+                                     src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTAwIDEwMDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+LnN0MHtmaWxsOiM0MzYxOUI7fS5zdDF7ZmlsbDojRkZGRkZGO308L3N0eWxlPjxnPjxjaXJjbGUgY2xhc3M9InN0MCIgY3g9IjUwIiBjeT0iNTAiIHI9IjQ1Ii8+PHBhdGggY2xhc3M9InN0MSIgZD0iTTU4LjQsMzEuOGMwLDIuMSwwLDQuMSwwLDYuMmMtMC41LDAtMSwwLTEuNCwwYy0wLjksMC0xLjcsMC0yLjYsMGMtMSwwLTEuNiwwLjUtMS42LDEuNGMtMC4xLDEuNCwwLDIuNywwLDQuMWMxLjksMCwzLjgsMCw1LjgsMGMtMC4yLDIuMi0wLjQsNC4zLTAuNyw2LjVjLTEuNywwLTMuNCwwLTUuMSwwYzAsNi4xLDAsMTIuMiwwLDE4LjNjLTIuNSwwLTUuMSwwLTcuNiwwYzAtNi4xLDAtMTIuMSwwLTE4LjJjLTEuMiwwLTIuNCwwLTMuNiwwYzAtMi4yLDAtNC4zLDAtNi41YzEuMiwwLDIuNCwwLDMuNiwwYzAtMC4yLDAtMC40LDAtMC41YzAtMS41LTAuMS0zLDAuMS00LjVjMC4yLTIuNCwxLjItNC41LDMuNC01LjhjMS4xLTAuNywyLjQtMC45LDMuNy0xYzIsMCw0LDAsNiwwQzU4LjIsMzEuNyw1OC4zLDMxLjgsNTguNCwzMS44eiIvPjwvZz48L3N2Zz4=">
+                            </a>
+                        </td>
+                        <td style="width: 7%">
+                            <a href="https://www.linkedin.com/company/5272242" target="_blank">
+                                <img style="width: 37px;height: 40px;"
+                                     src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMzIgMzIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMyIDMyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHN0eWxlIHR5cGU9InRleHQvY3NzIj4uc3Qwe2ZpbGw6IzAwN0JCNTt9LnN0MXtmaWxsOiNGRkZGRkY7fTwvc3R5bGU+PGc+PGNpcmNsZSBjbGFzcz0ic3QwIiBjeD0iMTYiIGN5PSIxNiIgcj0iMTYiLz48Zz48cmVjdCB4PSI3IiB5PSIxMSIgY2xhc3M9InN0MSIgd2lkdGg9IjQiIGhlaWdodD0iMTQiLz48cGF0aCBjbGFzcz0ic3QxIiBkPSJNMjAuNSwxMWMtMi44LDAtMy4zLDEtMy41LDJ2LTJoLTR2MTRoNHYtOGMwLTEuMywwLjctMiwyLTJjMS4zLDAsMiwwLjcsMiwydjhoNHYtN0MyNSwxNCwyNC41LDExLDIwLjUsMTF6Ii8+PGNpcmNsZSBjbGFzcz0ic3QxIiBjeD0iOSIgY3k9IjgiIHI9IjIiLz48L2c+PC9nPjwvc3ZnPg==">
+                            </a>
+                        </td>
+                        <td style="width: 7%">
+                            <a href="https://twitter.com/UNIFiSoftware">
+                                <img style="width: 37px;height: 40px;"
+                                     src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMzIgMzIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMyIDMyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHN0eWxlIHR5cGU9InRleHQvY3NzIj4uc3Qwe2ZpbGw6IzU1QUNFRTt9LnN0MXtmaWxsOiNGRkZGRkY7fTwvc3R5bGU+PGc+PGNpcmNsZSBjbGFzcz0ic3QwIiBjeD0iMTYiIGN5PSIxNiIgcj0iMTYiLz48cGF0aCBjbGFzcz0ic3QxIiBkPSJNMjYsOS45Yy0wLjcsMC4zLTEuNSwwLjUtMi40LDAuNmMwLjktMC41LDEuNS0xLjMsMS44LTIuMmMtMC44LDAuNS0xLjcsMC44LTIuNiwxQzIyLjEsOC41LDIxLDgsMTkuOSw4Yy0yLjMsMC00LjEsMS44LTQuMSw0YzAsMC4zLDAsMC42LDAuMSwwLjljLTMuNC0wLjItNi40LTEuOC04LjUtNC4yQzcsOS4zLDYuOCwxMCw2LjgsMTAuOGMwLDEuNCwwLjcsMi42LDEuOCwzLjRjLTAuNywwLTEuMy0wLjItMS45LTAuNWMwLDAsMCwwLDAsMC4xYzAsMiwxLjQsMy42LDMuMyw0Yy0wLjMsMC4xLTAuNywwLjEtMS4xLDAuMWMtMC4zLDAtMC41LDAtMC44LTAuMWMwLjUsMS42LDIsMi44LDMuOCwyLjhjLTEuNCwxLjEtMy4yLDEuNy01LjEsMS43Yy0wLjMsMC0wLjcsMC0xLTAuMWMxLjgsMS4xLDQsMS44LDYuMywxLjhDMTkuOCwyNCwyNCwxNy45LDI0LDEyLjVjMC0wLjIsMC0wLjQsMC0wLjVDMjQuOCwxMS40LDI1LjUsMTAuNywyNiw5Ljl6Ii8+PC9nPjwvc3ZnPg==">
+                            </a>
+                        </td>
+                    </tr>
+                </table!-->
+            </footer>
+        </div>
+    </div>
+</div>
